@@ -30,6 +30,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     gralloc_handle_has_ubwcp_format \
+    target_libcameraservice_ext_lib \
     target_surfaceflinger_udfps_lib \
     target_init_vendor_lib \
     camera_needs_client_info_defaults \
@@ -62,6 +63,7 @@ endef
 
 # Set default values
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
+TARGET_CAMERA_SERVICE_EXT_LIB ?= libcameraservice_ext_lib
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
 TARGET_CAMERA_NEEDS_CLIENT_INFO ?= false
@@ -96,6 +98,7 @@ SOONG_CONFIG_lineageGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_U
 SOONG_CONFIG_lineageGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_lineageGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 SOONG_CONFIG_lineageGlobalVars_target_charge_rate_multiplier := $(TARGET_CHARGE_RATE_MULTIPLIER)
+SOONG_CONFIG_lineageGlobalVars_target_libcameraservice_ext_lib := $(TARGET_CAMERA_SERVICE_EXT_LIB)
 SOONG_CONFIG_lineageQcomVars_no_fm_firmware := $(TARGET_QCOM_NO_FM_FIRMWARE)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_lineageQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
