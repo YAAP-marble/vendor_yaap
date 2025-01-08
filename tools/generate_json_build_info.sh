@@ -72,7 +72,8 @@ if unzip "$file_path" payload_properties.txt; then
     keyPairs=$(cat payload_properties.txt | sed "s/=/\": \"/" | sed 's/^/          \"/' | sed 's/$/\"\,/')
     keyPairs=${keyPairs%?}
 fi
-datetime=$(date +%s)
+# get date from props
+datetime=$(grep "ro.build.date.utc" "${file_dir}/system/build.prop" | cut -d '=' -f 2)
 
 {
     echo    "{"
