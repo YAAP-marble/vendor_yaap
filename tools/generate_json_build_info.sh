@@ -62,7 +62,7 @@ if [[ $isOfficial != 1 ]]; then
     fi
 fi
 
-echo -e "${GREEN}Generating .json${NC}"
+echo -e "${GREEN}Generating ${YELLOW}${device_code}.json${NC}"
 
 isPayload=0
 [ -f payload_properties.txt ] && rm payload_properties.txt
@@ -103,4 +103,4 @@ fi
 
 device_code=$(echo "${file_name}" | cut -d'-' -f4)
 mv "${file_path}.json" "${file_dir}/${device_code}.json"
-echo -e "${GREEN}Done generating ${YELLOW}${device_code}.json${NC}"
+echo -e "${GREEN}Done generating ${YELLOW}${file_dir}/${device_code}.json${NC}"
