@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
     libsepol \
     nano \
     setcap \
+    strace \
     vim
 
 # Openssh
